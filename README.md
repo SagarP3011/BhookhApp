@@ -1,50 +1,78 @@
-# Welcome to your Expo app 👋
+React Native Navigation App
+This project is a simple React Native app demonstrating navigation using Expo Router and React Navigation. It includes a login screen and a home screen, allowing users to navigate between them seamlessly.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Features
+Login Screen:
 
-## Get started
+Includes input fields for username and password.
+A login button navigates users to the home screen.
+Home Screen:
 
-1. Install dependencies
+Displays a welcome message to the user.
+Expo Router Integration:
 
-   ```bash
-   npm install
-   ```
+Uses file-based routing for screen navigation.
+Custom Tab Layout:
 
-2. Start the app
+Configurable tab bar with custom icons and styling.
+Getting Started
+Prerequisites
+Ensure you have the following installed on your machine:
 
-   ```bash
-    npx expo start
-   ```
+Node.js (v14 or later)
+Expo CLI
+Yarn or npm
+Installation
+Clone the repository:
 
-In the output, you'll find options to open the app in a
+bash
+Copy code
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+Install dependencies:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+bash
+Copy code
+npm install
+# or
+yarn install
+Start the app:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+bash
+Copy code
+expo start
+Project Structure
+bash
+Copy code
+root
+├── components/
+│   ├── HapticTab.tsx           # Custom tab bar button with haptic feedback
+│   ├── ui/
+│   │   ├── IconSymbol.tsx      # Icon component for tab bar
+│   │   └── TabBarBackground.tsx # Tab bar background customization
+├── screens/
+│   ├── LoginScreen.tsx         # Login screen
+│   ├── HomeScreen.tsx          # Home screen
+├── _layout.tsx                 # Tab and navigation layout
+├── App.tsx                     # App entry point
+├── app.config.js               # App configuration file
+└── package.json
+Usage
+Login:
 
-## Get a fresh project
+Navigate to the login screen on app start.
+Enter dummy credentials (username and password).
+Tap the login button to navigate to the home screen.
+Home Screen:
 
-When you're ready, run:
+Displays a simple "Welcome" message.
+Dependencies
+This project uses the following key dependencies:
 
-```bash
-npm run reset-project
-```
+Expo Router - File-based routing for Expo apps.
+React Navigation - Navigation for React Native apps.
+React Native Gesture Handler - For enhanced touch gestures.
+Customization
+Icons: Replace the icons in TabLayout (_layout.tsx) with any other icons from the IconSymbol library or your preferred library.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Styling: Modify styles in TabBarBackground.tsx or individual screens to match your theme.
